@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="ca.javateacher.catmessage8.InputFragment"
+        android:label="Input"
+        tools:layout="@layout/fragment_input">
+        <action
+            android:id="@+id/action_input_to_output"
+            app:destination="@id/outputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outputFragment"
+        android:name="ca.javateacher.catmessage8.OutputFragment"
+        android:label="Output"
+        tools:layout="@layout/fragment_output" >
+        <argument
+            android:name="urgent"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue='"Purr"' />
+    </fragment>
+    <action
+        android:id="@+id/action_global_input"
+        app:destination="@id/inputFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ca.javateacher.catmessage8.SettingsFragment"
+        android:label="Settings" />
+    <action
+        android:id="@+id/action_global_settings"
+        app:destination="@id/settingsFragment" />
+    <dialog
+        android:id="@+id/aboutFragment"
+        android:name="ca.javateacher.catmessage8.AboutFragment"
+        android:label="AboutFragment" />
+    <action
+        android:id="@+id/action_global_about"
+        app:destination="@id/aboutFragment" />
+</navigation>
