@@ -38,19 +38,23 @@ public class InputFragment extends Fragment {
     mUrgentCheckBox = view.findViewById(R.id.urgent_check_box);
     mMessageGroup = view.findViewById(R.id.message_group);
 
+    // make the buttons work
+    Button resetButton = view.findViewById(R.id.reset_button);
+    resetButton.setOnClickListener(v -> reset());
     Button sendButton = view.findViewById(R.id.send_button);
-    sendButton.setOnClickListener(this::showOutput);
+    sendButton.setOnClickListener(this::send);
 
     // lookup the preferences object
     mPreferences =
             PreferenceManager.getDefaultSharedPreferences(getContext());
 
+    // reset the inputs to the defaults from the settings
+    reset();
+
     return view;
   }
 
-  @Override
-  public void onResume() {
-    super.onResume();
+  private void reset() {
     boolean urgent = mPreferences.getBoolean(getString(R.string.urgent_key), false);
     mUrgentCheckBox.setChecked(urgent);
     String message
@@ -73,7 +77,7 @@ public class InputFragment extends Fragment {
     }
   }
 
-  private void showOutput(View v) {
+  private void send(View v) {
     // get urgent flag value
     boolean urgent = mUrgentCheckBox.isChecked();
     // get the selected message text
