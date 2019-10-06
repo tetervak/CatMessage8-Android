@@ -34,14 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/gap0"
-        android:checked="true"
+        android:checked="false"
         android:text="@string/urgent" />
 
     <RadioGroup
         android:id="@+id/message_group"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checkedButton="@+id/mew_button">
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/purr_button"
