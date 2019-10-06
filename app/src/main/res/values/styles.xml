@@ -17,14 +17,6 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="InputTheme" parent="AppTheme">
-        <item name="android:background">@color/Teal50</item>
-    </style>
-
-    <style name="OutputTheme" parent="AppTheme">
-        <item name="android:background">@color/Yellow200</item>
-    </style>
-
     <style name="activity_label">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

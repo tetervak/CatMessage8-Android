@@ -6,8 +6,6 @@
     <string name="about">About</string>
     <string name="author">Alex Tetervak, Sheridan College, 2019</string>
 
-    <string name="title_activity_output">Output Activity</string>
-
     <!-- radio button labels / output strings -->
     <string name="cat_purr">Purr</string>
     <string name="cat_mew">Mew</string>
@@ -17,6 +15,7 @@
     <string name="urgent">Urgent</string>
     <string name="not_urgent">Not Urgent</string>
 
+    <!-- input / output labels -->
     <string name="select_message">Select a message</string>
     <string name="message_label">Received message</string>
     <string name="undefined">Undefined</string>
@@ -26,10 +25,6 @@
     <string name="send">Send</string>
     <string name="back">Back</string>
 
-    <!-- the activity labels -->
-    <string name="main_activity">Main Activity</string>
-    <string name="output_activity">Output Activity</string>
-
     <!-- the floating label -->
     <string name="sheridan">Sheridan, 2019</string>
 
@@ -38,8 +33,7 @@
     <string name="output_fragment_label">Output Fragment</string>
     <string name="main_activity_label">Main Activity</string>
 
-    <!-- Settings Activity -->
-    <string name="title_activity_settings">Settings</string>
+    <!-- Settings Fragment -->
     <string name="message_text">Message Text</string>
     <string name="delivery_speed">Delivery Speed</string>
     <string name="default_message_title">Default Message</string>
