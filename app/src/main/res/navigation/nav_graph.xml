@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_input">
         <action
             android:id="@+id/action_input_to_output"
-            app:destination="@id/outputFragment" />
+            app:destination="@id/outputFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/outputFragment"
@@ -37,7 +39,8 @@
         android:label="Settings" />
     <action
         android:id="@+id/action_global_settings"
-        app:destination="@id/settingsFragment" />
+        app:destination="@id/settingsFragment"
+        app:enterAnim="@android:anim/slide_in_left" />
     <dialog
         android:id="@+id/aboutFragment"
         android:name="ca.javateacher.catmessage8.AboutFragment"
